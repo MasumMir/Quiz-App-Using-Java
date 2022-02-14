@@ -9,7 +9,9 @@ public class RulesPage extends JFrame {
 
     private JLabel text1,text2;
     private JButton back_btn,start_btn;
+    String username;
     RulesPage(String username){
+        this.username = username;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
         setBounds(100,50,1000,600);
@@ -65,8 +67,9 @@ public class RulesPage extends JFrame {
                 setVisible(false);
                 new SimpleMinds().setVisible(true);
 
-            }else if(start_btn.isSelected()){
-
+            }else if(e.getSource()==start_btn){
+                setVisible(false);
+                new QuizPage(username).setVisible(true);
             }
         }
     }

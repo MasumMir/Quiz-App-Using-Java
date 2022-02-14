@@ -21,8 +21,9 @@ public class SimpleMinds extends JFrame {
         getContentPane().setBackground(Color.white);
 
 
-        img = new ImageIcon(getClass().getResource("resizedImage.png"));
+        img = new ImageIcon(getClass().getResource("img/resizedImage.png"));
         font = new Font("Arial",Font.BOLD,30);
+        
         img_label = new JLabel(img);
         img_label.setBounds(0,0,600,410);
         add(img_label);
