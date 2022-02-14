@@ -39,7 +39,7 @@ public class SimpleMinds extends JFrame {
         text_label2.setFont(new Font("Arial",Font.ITALIC+Font.BOLD,15));
         add(text_label2);
 
-        textField = new JTextField("Masum");
+        textField = new JTextField();
         textField.setBounds(710,140,170,20);
         textField.setFont(new Font("Arial",Font.BOLD,13));
         textField.setHorizontalAlignment(JTextField.CENTER);
@@ -68,13 +68,12 @@ public class SimpleMinds extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-              if(rules_btn.isSelected()){
-                    String name = rules_btn.getText();
-                    new RulesPage(name);
-                    setVisible(true);
+              if(e.getSource() == rules_btn){
+                    String name = textField.getText();
+                    new RulesPage(name).setVisible(true);
 
               }else{
-                System.exit(0);
+               System.exit(0);
               }
         }
     }
